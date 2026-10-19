@@ -142,7 +142,7 @@ tế    len [ 0    0    2     0     0  ]
 | **Thời gian test/trial** | **10.63 ms** | **3.60 ms** | **HMM nhanh gấp ~3 lần DTW khi suy luận** |
 | **Bản chất mô hình hóa** | Hình học (Deterministic) | Xác suất (Probabilistic) | HMM mô hình hóa được phương sai và bất định âm học |
 | **Khả năng giải thích** | Warping path | Viterbi state path | Viterbi path gắn liền với phân đoạn âm vị (segmentation) |
-| **Khả năng mở rộng từ vựng** | Hạn chế ($O(N_{mẫu})$) | Rất mạnh (Subword, LM) | HMM dễ dàng kết hợp Lexicon và Decoder mạng từ |
+| **Khả năng mở rộng từ vựng** | Hạn chế $O(N_{\text{mẫu}})$ | Rất mạnh (Subword, LM) | HMM dễ dàng kết hợp Lexicon và Decoder mạng từ |
 
 ### 4.6. Thử nghiệm Mở rộng Bigram & MAP Re-ranking
 Với mẫu `len_07.wav` và ngữ cảnh từ trước là `mo`:
@@ -184,8 +184,8 @@ Với mẫu `len_07.wav` và ngữ cảnh từ trước là `mo`:
   - Thuật toán **Viterbi** sử dụng **phép lấy cực đại ($\max$)**:
     $$\delta_t(j) = b_j(x_t) \max_i [\delta_{t-1}(i) a_{ij}]$$
 - **Hai câu hỏi khác nhau được trả lời:**
-  - **Forward** trả lời câu hỏi Đánh giá (*Evaluation*): Xác suất toàn cục để mô hình $\lambda$ sinh ra toàn bộ chuỗi quan sát $X$ là bao nhiêu ($P(X \mid \lambda) = \sum_j \alpha_T(j)$)?
-  - **Viterbi** trả lời câu hỏi Giải mã (*Decoding*): Chuỗi trạng thái ẩn duy nhất nào có xác suất cao nhất đã sinh ra chuỗi quan sát $X$ ($Q^* = \arg\max_Q P(X, Q \mid \lambda)$)?
+  - **Forward** trả lời câu hỏi Đánh giá (*Evaluation*): Xác suất toàn cục để mô hình $\lambda$ sinh ra toàn bộ chuỗi quan sát $X$ là bao nhiêu $P(X \mid \lambda) = \sum_j \alpha_T(j)$ ?
+  - **Viterbi** trả lời câu hỏi Giải mã (*Decoding*): Chuỗi trạng thái ẩn duy nhất nào có xác suất cao nhất đã sinh ra chuỗi quan sát $X$ $Q^* = \arg\max_Q P(X, Q \mid \lambda)$?
 
 ---
 
