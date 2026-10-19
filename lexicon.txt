@@ -1,0 +1,7 @@
+# Lexicon mini: Ánh xạ Từ -> Chuỗi Âm vị (Phonemes)
+# Format: WORD PHONE_1 PHONE_2 ... PHONE_K
+mo m o
+dong d o ng
+len l e n
+xuong s uo ng
+dung d u ng
